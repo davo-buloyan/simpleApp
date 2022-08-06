@@ -1,0 +1,25 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.basic-container {
+  display: inline-block;
+  position: relative;
+  margin: auto;
+  left: 50%;
+}
+
+img {
+  max-width: 100%;
+  position: absolute;
+  max-height: 100%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  clip-path: circle(33% at 50% 49%);
+}

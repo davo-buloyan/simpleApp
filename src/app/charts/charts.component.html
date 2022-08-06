@@ -1,0 +1,14 @@
+<div class="container">
+	<h1>My Chart</h1>
+
+
+	<button mat-button color="accent" (click)="onLoadData()">
+		Load New Data
+	</button>
+
+	<div class="chart-wrapper">
+		<canvas baseChart [type]="'line'" [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions">
+		</canvas>
+	</div>
+
+</div>
