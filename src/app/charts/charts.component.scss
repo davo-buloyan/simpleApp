@@ -1,5 +1,19 @@
 .container {
-    height: 100%;
-    width: 80%;
-    margin: auto;
+  height: 100%;
+  width: 65%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.btn-container {
+  float: right;
+}
+
+mat-icon{
+  height:48px;
+  width:48px;
+  font-size:48px;
 }

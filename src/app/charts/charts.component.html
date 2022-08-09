@@ -1,14 +1,21 @@
 <div class="container">
-	<h1>My Chart</h1>
+  <h1>My Chart</h1>
 
-
-	<button mat-button color="accent" (click)="onLoadData()">
-		Load New Data
-	</button>
-
-	<div class="chart-wrapper">
-		<canvas baseChart [type]="'line'" [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions">
-		</canvas>
-	</div>
-
+  <div class="chart-wrapper">
+    <canvas
+      baseChart
+      [type]="'line'"
+      [datasets]="chartData"
+      [labels]="chartLabels"
+      [options]="chartOptions"
+    >
+    </canvas>
+  </div>
+  <br />
+  <div class="btn-container">
+    <button mat-button color="accent" (click)="onLoadData()">
+      <mat-icon class="material-icons">refresh</mat-icon>
+      Load New Data
+    </button>
+  </div>
 </div>

@@ -37,10 +37,10 @@ import { UserService } from '@app/services/user.service';
 })
 export class TableComponent implements OnInit, AfterViewInit, OnDestroy {
   private readonly _destroy = new Subject<void>();
-  
+
   readonly displayedColumns: string[];
   readonly dataSource: MatTableDataSource<IUser>;
-  
+
   callState$ = this.userService.callState$;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -63,10 +63,12 @@ export class TableComponent implements OnInit, AfterViewInit, OnDestroy {
       });
   }
 
-  ngAfterViewInit(): void {
+  ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
+
+
 
   ngOnDestroy(): void {
     this._destroy.next();
@@ -81,7 +83,6 @@ export class TableComponent implements OnInit, AfterViewInit, OnDestroy {
       this.dataSource.paginator.firstPage();
     }
   }
-
 
   onDelete(id: number) {
     this.userService.delateUser(id);
